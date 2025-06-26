@@ -17,7 +17,7 @@ EnvironmentFile=miniflux.env
 Environment=RUN_MIGRATIONS=1
 Environment=CREATE_ADMIN=1
 
-Network=rss.network
+#Network=rss.network
 
 PublishPort=8131:8080
 
