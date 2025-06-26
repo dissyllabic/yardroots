@@ -18,13 +18,14 @@ Volume=/var/opt/containers/miniflux-db:/var/lib/postgresql/data:Z
 
 #Network=rss.network
 
-#HealthcheckCmd=["CMD", "pg_isready", "-U", "miniflux"]
-#HealthcheckInterval=10s
-#HealthcheckStartPeriod=30s
+HealthcheckCmd=["CMD", "pg_isready", "-U", "miniflux"]
+HealthcheckInterval=10s
+HealthcheckStartPeriod=30s
 
 [Service]
 Restart=on-failure
 TimeoutStartSec=900
 
 [Install]
-WantedBy=default.target
+# WantedBy=default.target
+WantedBy=multi-user.target default.target

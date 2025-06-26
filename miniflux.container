@@ -24,7 +24,7 @@ PublishPort=8131:8080
 Label=homepage.group=RSS/Feed
 Label=homepage.name=Miniflux
 Label=homepage.icon=miniflux.png
-Label=homepage.href=http://10.0.0.3:8131
+Label=homepage.href=http://localhost:8131
 Label=homepage.description=Minimalist RSS reader
 
 [Service]
@@ -32,4 +32,5 @@ Restart=on-failure
 TimeoutStartSec=900
 
 [Install]
-WantedBy=default.target
+#WantedBy=default.target
+WantedBy=multi-user.target default.target
