@@ -16,7 +16,7 @@ EnvironmentFile=miniflux.env
 
 Volume=/var/opt/containers/miniflux-db:/var/lib/postgresql/data:Z
 
-Network=rss.network
+#Network=rss.network
 
 #HealthcheckCmd=["CMD", "pg_isready", "-U", "miniflux"]
 #HealthcheckInterval=10s
